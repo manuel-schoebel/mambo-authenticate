@@ -1,9 +1,14 @@
 Meteor.startup ->
   AccountsEntry =
-    settings: {}
+    settings: {
+      i18n: {}
+    }
 
     config: (appConfig) ->
       @settings = _.extend(@settings, appConfig)
+
+    i18n: (key) ->
+      if @settings.i18n[key] then return @settings.i18n[key] else return key
 
   @AccountsEntry = AccountsEntry
 

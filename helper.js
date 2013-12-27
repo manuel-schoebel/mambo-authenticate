@@ -10,4 +10,8 @@ if (typeof Handlebars !== 'undefined') {
       return "Signed In";
     }
   });
+
+  Handlebars.registerHelper("AE_i18n", function(key){
+    return AccountsEntry.i18n(key);
+  });
 }
