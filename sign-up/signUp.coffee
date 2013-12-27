@@ -63,11 +63,11 @@ Template.entrySignUp.events
       errMsg = []
       msg = false
       if password.length < 7
-        errMsg.push "7 character minimum password."
+        errMsg.push AccountsEntry.i18n "7 character minimum password."
       if password.search(/[a-z]/i) < 0
-        errMsg.push "Password requires 1 letter."
+        errMsg.push AccountsEntry.i18n "Password requires 1 letter."
       if password.search(/[0-9]/) < 0
-        errMsg.push "Password must have at least one digit."
+        errMsg.push AccountsEntry.i18n "Password must have at least one digit."
 
       if errMsg.length > 0
         msg = ""
@@ -92,15 +92,15 @@ Template.entrySignUp.events
       'USERNAME_ONLY'], fields)
 
     if usernameRequired && email.length is 0
-      Session.set('entryError', 'Username is required')
+      Session.set('entryError', AccountsEntry.i18n 'Username is required')
       return
 
     if emailRequired && email.length is 0
-      Session.set('entryError', 'Email is required')
+      Session.set('entryError', AccountsEntry.i18n 'Email is required')
       return
 
     if AccountsEntry.settings.showSignupCode && signupCode.length is 0
-      Session.set('entryError', 'Signup code is required')
+      Session.set('entryError', AccountsEntry.i18n 'Signup code is required')
       return
 
     Meteor.call('entryValidateSignupCode', signupCode, (err, valid) ->
@@ -125,7 +125,7 @@ Template.entrySignUp.events
           Router.go AccountsEntry.settings.dashboardRoute
         )
       else
-        Session.set('entryError', 'Signup code is incorrect')
+        Session.set('entryError', AccountsEntry.i18n 'Signup code is incorrect')
         return
     )
 

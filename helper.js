@@ -7,7 +7,7 @@ if (typeof Handlebars !== 'undefined') {
     } else if (Meteor.user().emails && Meteor.user().emails[0]) {
       return Meteor.user().emails[0].address;
     } else {
-      return "Signed In";
+      return AccountsEntry.i18n("Signed In");
     }
   });
 

@@ -12,19 +12,19 @@
     {{/if}}
 
     {{#if wrapLinks}}<li>{{/if}}
-      <a href="/sign-out">Sign Out</a>
+      <a href="/sign-out">{{AE_i18n 'Sign Out'}}</a>
     {{#if wrapLinks}}</li>{{/if}}
 
   {{else}}
 
     {{#if wrapLinks}}<li>{{/if}}
-      <a href="/sign-in">Sign In</a>
+      <a href="/sign-in">{{AE_i18n 'Sign In'}}</a>
     {{#if wrapLinks}}</li>{{/if}}
 
-    {{#unless wrapLinks}}<span>or</span>{{/unless}}
+    {{#unless wrapLinks}}<span>{{AE_i18n 'or'}}</span>{{/unless}}
 
     {{#if wrapLinks}}<li>{{/if}}
-      <a href="/sign-up">Sign Up</a>
+      <a href="/sign-up">{{AE_i18n 'Sign Up'}}</a>
     {{#if wrapLinks}}</li>{{/if}}
 
   {{/if}}

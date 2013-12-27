@@ -12,9 +12,9 @@ Template.entrySignIn.helpers
       'USERNAME_AND_EMAIL'
       'USERNAME_AND_OPTIONAL_EMAIL'
       ], fields)
-      return 'Username or email'
+      return AccountsEntry.i18n 'Username or email'
 
-    return 'Email'
+    return AccountsEntry.i18n 'Email'
 
   logo: ->
     AccountsEntry.settings.logo
