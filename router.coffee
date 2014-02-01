@@ -8,9 +8,9 @@ Router.map ->
 
   @route "entrySignUp",
     path: "/sign-up"
-    onBeforeRun: ->
-      Session.set('entryError', undefined)
-      Session.set('buttonText', 'up')
+    # onBeforeRun: ->
+    #   Session.set('entryError', undefined)
+    #   Session.set('buttonText', 'up')
 
   @route "entryForgotPassword",
     path: "/forgot-password"

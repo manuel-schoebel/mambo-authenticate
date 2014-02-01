@@ -9,7 +9,6 @@ Package.on_use(function(api) {
     'accounts-base',
     'underscore',
     'templating',
-    'handlebars',
     'spark',
     'session',
     'coffeescript',
