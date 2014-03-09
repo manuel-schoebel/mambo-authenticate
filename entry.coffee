@@ -1,14 +1,21 @@
 Meteor.startup ->
   AccountsEntry =
-    settings: {}
+    settings: {
+      showSignupCode: false
+      dashboardRoute: '/'
+    }
 
   @AccountsEntry = AccountsEntry
 
   Meteor.methods
     entryValidateSignupCode: (signupCode) ->
+      check signupCode, Match.Any
       not AccountsEntry.settings.showSignupCode or signupCode is AccountsEntry.settings.signupCode
 
     accountsCreateUser: (username, email, password) ->
+      check username, Match.Any
+      check email, Match.Any
+      check password, Match.Any
       if username
         Accounts.createUser
           username: username,
