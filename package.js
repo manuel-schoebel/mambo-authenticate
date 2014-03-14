@@ -9,9 +9,9 @@ Package.on_use(function(api) {
     'accounts-base',
     'underscore',
     'templating',
-    'spark',
     'session',
     'coffeescript',
+    'ui',
     'less']
   , 'client');
 
