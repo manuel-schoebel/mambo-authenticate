@@ -31,7 +31,7 @@ Package.on_use(function(api) {
     'shared/error.coffee',
     'shared/accountButtons.html',
     'shared/accountButtons.coffee',
-    'entry.import.less',
+    'entry.less',
     'helper.js']
   , 'client');
 
